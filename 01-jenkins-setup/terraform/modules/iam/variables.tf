@@ -1,14 +1,14 @@
 variable "instance_profile_name" {
   type    = string
-  default = "jenkins-profile"
+  default = "example-instance-profile"
 }
 
 variable "iam_policy_name" {
   type    = string
-  default = "jenkins-iam-policy"
+  default = "example-policy"
 }
 
 variable "role_name" {
   type    = string
-  default = "jenkins-role"
+  default = "example-role"
 }

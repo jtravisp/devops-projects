@@ -4,6 +4,6 @@ provider "aws" {
 
 module "efs_module" {
   source = "../modules/efs"
-  vpc_id     = "vpc-0a5ca4a92c2e10163"
-  subnet_ids = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
+  vpc_id     = "vpc-0514f8d22a810460d"
+  subnet_ids = ["subnet-0859fe5c267568008", "subnet-0be668fe5fdd7a948", "subnet-078d8349252a29db6"]
 }
