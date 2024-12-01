@@ -1,9 +1,36 @@
 ---
-- name: Update apt cache
+- name: Update apt cache and upgrade all packages
+  become: yes
   apt:
     update_cache: yes
+    upgrade: full
+
+- name: Install dependencies for OpenJDK 17
+  become: yes
+  apt:
+    name:
+      - libgtk2.0-0
+      - libgtk-3-0
+      - libxrandr2
+      - libxinerama1
+      - libgl1
+      - libharfbuzz0b
+      - libjpeg8
+      - libxi6
+      - libxrender1
+      - libxtst6
+      - libfontconfig1
+      - liblcms2-2
+      - libasound2
+      - libpcsclite1
+    state: present
+
+- name: Fix broken packages
+  become: yes
+  shell: apt-get install -f -y
 
 - name: Install Java JDK 17
+  become: yes
   apt:
     name: openjdk-17-jdk
     state: present
