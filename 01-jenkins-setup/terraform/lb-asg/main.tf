@@ -4,10 +4,10 @@ provider "aws" {
 
 module "lb-asg" {
   source        = "../modules/lb-asg"
-  subnets       = ["subnet-058a7514ba8adbb07", "subnet-0dbcd1ac168414927", "subnet-032f5077729435858"]
-  ami_id        = "ami-074d40b56472c5b9b"
+  subnets       = ["subnet-0859fe5c267568008", "subnet-0be668fe5fdd7a948", "subnet-078d8349252a29db6"]
+  ami_id        = "ami-0c0854f419b3cbb21"
   instance_type = "t2.small"
-  key_name      = "techiescamp"
+  key_name      = "devops-projects/jenkins"
   environment   = "dev"
-  vpc_id        = "vpc-0a5ca4a92c2e10163"
+  vpc_id        = "vpc-0514f8d22a810460d"
 }
